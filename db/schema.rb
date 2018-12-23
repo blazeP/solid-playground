@@ -10,10 +10,33 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_12_13_011952) do
+ActiveRecord::Schema.define(version: 2018_12_23_135650) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "dwarves", force: :cascade do |t|
+    t.string "original_name"
+    t.string "english_name"
+    t.text "description"
+    t.integer "points_value"
+    t.string "latitude"
+    t.string "longitude"
+    t.string "localization"
+    t.integer "district"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "founds", force: :cascade do |t|
+    t.bigint "user_id"
+    t.bigint "dwarf_id"
+    t.date "found_date"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["dwarf_id"], name: "index_founds_on_dwarf_id"
+    t.index ["user_id"], name: "index_founds_on_user_id"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -28,4 +51,6 @@ ActiveRecord::Schema.define(version: 2018_12_13_011952) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "founds", "dwarves"
+  add_foreign_key "founds", "users"
 end
