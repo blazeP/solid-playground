@@ -10,7 +10,7 @@ puts "seeds start\n"
 
 dwarves_data = [
   {
-    original_name: "Więźień", english_name: "Prisoner", points_value: 3,
+    original_name: "Więzień", english_name: "Prisoner", points_value: 3,
     description: "Siedzi za kratami, przykuty do cięźkiej kuli.",
     latitude: "51.112433", longitude: "17.032473", localization: "ul. Więzienna 6",
     district: Dwarf::DISTRICTS[:stare_miasto]
@@ -32,8 +32,8 @@ dwarves_data.each { |d| Dwarf.create(d) }
 puts "Dwarves have been created"
 
 users_data = [
-  { email: "blazej@dwarf.com", password: "wroclaw1", password_confirmation: "wroclaw1" },
-  { email: "michal@dwarf.com", password: "wroclaw1", password_confirmation: "wroclaw1" }
+  { email: "blazej@dwarf.com", first_name: "Błażej", password: "wroclaw1", password_confirmation: "wroclaw1" },
+  { email: "michal@dwarf.com", first_name: "Michał", password: "wroclaw1", password_confirmation: "wroclaw1" }
 ]
 users_data.each { |u| User.create(u) }
 puts "Users have been created"

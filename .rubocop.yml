@@ -15,6 +15,7 @@ AllCops:
     - config/deploy.rb
     - spec/spec_helper.rb
     - spec/rails_helper.rb
+    - app/views/**/*
 
   DisplayCopNames: true
   DisplayStyleGuide: false
