@@ -1,9 +1,9 @@
 <h1>Dwarf List</h1>
-
 <div>
-    We can implement search bar here - perhaps
+  We can implement search bar here - perhaps
 </div>
-
-<% @dwarves.each do |dwarf| %>
-  <%= render partial: "dwarf_list_element", locals: { dwarf: dwarf } %>
-<% end %>
+<div class="card-columns">
+  <% @dwarves.each do |dwarf| %>
+    <%= render partial: "dwarf_list_element", locals: { dwarf: dwarf } %>
+  <% end %>
+</div>
