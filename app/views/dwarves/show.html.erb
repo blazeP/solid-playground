@@ -1,1 +1,17 @@
-<h1><%= @dwarf.original_name %></h1>
+<div class="container text-center top-buffer">
+  <div class="card">
+    <h5 class="card-header"><%= @dwarf.original_name %></h5>
+    <div class="card-body">
+      <h5 class="card-title"><%= @dwarf.english_name %></h5>
+      <p class="card-text"><%= @dwarf.description %></p>
+      <div class="card basic-margin">
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item"><%= t("dwarves.points", points: @dwarf.points_value )%></li>
+          <li class="list-group-item"><%= t("dwarves.localization", district: district_name(@dwarf.district), localization: @dwarf.localization) %></li>
+          <li class="list-group-item"><%= t("dwarves.coordinates", latitude: @dwarf.latitude, longitude: @dwarf.longitude)%></li>
+        </ul>
+      </div>
+      <%= link_to t("dwarves.found"), new_found_path, class: "btn btn-primary top-margin"%>
+    </div>
+  </div>
+</div>
