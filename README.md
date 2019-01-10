@@ -3,17 +3,18 @@
 ## TO DO
 
 * ogólne style dla całej aplikacji
-* Widok dla Krasnala (show) - prosty layout i stylowanie
-* Lista krasnali (index) - prosty layout i stylowanie
+* Widok dla Krasnala (show) - prosty layout i stylowanie - **DONE**
+* Lista krasnali (index) - prosty layout i stylowanie - **DONE**
 * Formularz "Nowy Wpis". Jako root route? Ograniczony dostęp tylko dla zalogowanych. Co wyświetlać na root'cie jeśli user niezalogowany?
-* Funkcjonalność "Moje krasnale" - controller, widok itp
-* Widok: show user
+* Funkcjonalność "Moje krasnale" - controller, widok itp - **DONE**
+* Widok: show user - lista krasnali / podsumowanie zebranych
 * Ranking użytkowników - osobny route. Radio buttons z wyborem "algorytmu".
+* WAŻNE - wymyślić sensowne algorytmy do pokazania SOLID
 * Zakładka About - myślę, że fajnie byłoby coś napisać na niej o tym projekcie i krótkie info o autorach (o nas)
 * Dodanie odpowiednich zakładek do hedeara
 * Zdobycie zdjęć / uzupełnienie informacji o krasnalach
-* Uzupełnienie listy osiedli - ile chcemy? Jak bardzo rozbite?
-* Wyszukiwarka ?
+* Uzupełnienie listy osiedli - ile chcemy? Jak bardzo rozbite? - **DONE**
+* Wyszukiwarka - na koniec ?
 * ... (pewnie coś więcej)
 
 ## Ogólne uwagi
